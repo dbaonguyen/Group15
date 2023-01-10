@@ -30,13 +30,6 @@ function linkAction(){
 
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
-/*==================== ACCORDION SKILLS ====================*/
-
-
-/*==================== QUALIFICATION TABS ====================*/
-
-
-/*==================== SERVICES MODAL ====================*/
 
 
 /*==================== PORTFOLIO SWIPER  ====================*/
@@ -130,7 +123,7 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
