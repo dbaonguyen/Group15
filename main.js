@@ -91,8 +91,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     
     cssMode: true,
     loop: true,
-    grabCursor:true,
-    spaceBetween:48,
+ 
     slidePerView: 1,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -104,6 +103,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
       dynamicBullets:true
     },
     mousewheel: true,
+    keyboard: true,
 
     
     

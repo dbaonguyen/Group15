@@ -280,9 +280,7 @@ img {
   gap: 1rem;
  
 }
-.home{
-  background-color: cyan;
-}
+
 
 .home__content{
   grid-template-columns: .5fr 3fr;
@@ -517,7 +515,7 @@ img {
 }
 
 .footer__bg{
-  background-color: var(--first-color-second);
+  background-color: var(--first-color);
   padding: 2rem 0 3rem;
 }
 .footer__title{
