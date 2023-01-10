@@ -414,12 +414,14 @@ img {
   text-align: center;
 }
 
-.portfolio__description{
+.portfolio__data{
   margin-bottom: var(--mb-0-75);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  height: 350px;
 
 }
+
 
 .swiper-button-prev::after,
 .swiper-button-next::after{
