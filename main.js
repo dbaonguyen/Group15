@@ -163,3 +163,12 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// Gsap animation for Home
+gsap.from('.home__data', {opacity: 0, duration: 2, delay: .8, y:60})
+gsap.from('.home__title, .home__name, .home__social, .home__scroll', {opacity:0,duration:2,delay:1,y:25,ease:'expo.out',stagger:.2})
+
+
+gsap.from('.nav__logo, .nav__toggle', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
+gsap.from('.nav__item, .change-theme', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
+gsap.from('.home_social-icon', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
