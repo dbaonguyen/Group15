@@ -213,7 +213,7 @@ function createNotification(message) {
     setTimeout(function() {
       notification.remove();
     }, 500);
-  },3000);
+  },2500);
 }
 
 // Example usage
