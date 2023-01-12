@@ -116,6 +116,7 @@ function scrollActive(){
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            createNotification("Press Left, Right to navigate");  
         }else{
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
@@ -131,7 +132,7 @@ function scrollUp(){
   const scrollUp = document.getElementById('scroll-up');
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
+} 
 window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME ====================*/ 
@@ -172,3 +173,47 @@ gsap.from('.home__title, .home__name, .home__social, .home__scroll', {opacity:0,
 gsap.from('.nav__logo, .nav__toggle', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
 gsap.from('.nav__item, .change-theme', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
 gsap.from('.home_social-icon', {opacity:0,duration:2,delay:1.5,y:25,ease:'expo.out',stagger:.2})
+
+
+
+function createNotification(message) {
+  // Create the notification element
+  var notification = document.createElement("div");
+  notification.innerHTML = message;
+  notification.classList.add("notification");
+
+  // Add the notification to the container
+  var container = document.getElementById("notification-container");
+  container.appendChild(notification);
+
+  // Position the notification at the bottom right corner
+  notification.style.right = "20px";
+  notification.style.bottom = "20px";
+
+  // Add a close button
+  var closeButton = document.createElement("span");
+  closeButton.innerHTML = "&times;";
+  closeButton.classList.add("close-button");
+  notification.appendChild(closeButton);
+
+  // Add event listener for the close button
+  closeButton.addEventListener("click", function() {
+    notification.remove();
+  });
+
+  // Fade in the notification
+  notification.style.opacity = "0";
+  setTimeout(function() {
+    notification.style.opacity = "1";
+  }, 50);
+
+  // Fade out and remove the notification after 5 seconds
+  setTimeout(function() {
+    notification.style.opacity = "0";
+    setTimeout(function() {
+      notification.remove();
+    }, 500);
+  },3000);
+}
+
+// Example usage
