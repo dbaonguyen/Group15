@@ -456,13 +456,15 @@ img {
   padding: 20px;
   background-color: #4CAF50;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 5px;
   transition: opacity 0.5s;
+  font: var(--body-font);
 }
 
 .close-button {
   float: right;
+  margin-left: 25px;
   font-size: 30px;
   cursor: pointer;
 }
