@@ -462,12 +462,6 @@ img {
   font: var(--body-font);
 }
 
-.close-button {
-  float: right;
-  margin-left: 25px;
-  font-size: 30px;
-  cursor: pointer;
-}
 
 /*==================== TESTIMONIAL ====================*/
 .testimonial__data,
