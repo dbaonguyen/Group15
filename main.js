@@ -190,16 +190,6 @@ function createNotification(message) {
   notification.style.right = "20px";
   notification.style.bottom = "20px";
 
-  // Add a close button
-  var closeButton = document.createElement("span");
-  closeButton.innerHTML = "&times;";
-  closeButton.classList.add("close-button");
-  notification.appendChild(closeButton);
-
-  // Add event listener for the close button
-  closeButton.addEventListener("click", function() {
-    notification.remove();
-  });
 
   // Fade in the notification
   notification.style.opacity = "0";
@@ -216,4 +206,3 @@ function createNotification(message) {
   },2500);
 }
 
-// Example usage
